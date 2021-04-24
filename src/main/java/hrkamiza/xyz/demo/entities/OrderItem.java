@@ -106,5 +106,12 @@ public class OrderItem {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	
+	public Double getsubTotal() {
+		Double sum = quantity * price;
+		sum = (double) Math.round(sum * 100);
+		sum = sum/100;
+		return sum;
+	}
 
 }

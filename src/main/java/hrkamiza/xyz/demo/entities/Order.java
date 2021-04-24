@@ -86,6 +86,16 @@ public class Order {
 		return itens;
 	}
 	
+	public Double getTotal() {
+		Double sum = 0.0;
+		for(OrderItem item: itens) {
+			sum += item.getsubTotal();
+		}
+		sum = (double) Math.round(sum * 100);
+		sum = sum/100;
+		return sum;
+		
+	}
 	
 	
 }
